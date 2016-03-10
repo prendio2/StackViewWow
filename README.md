@@ -1,7 +1,6 @@
 # StackViewWow
 
-Sample project for rdar://25087688
-[rdar://25087688](http://openradar.appspot.com/25087688)
+Sample project for [rdar://25087688](http://openradar.appspot.com/25087688)
 
 ## Summary:
 If setHidden:YES has been called more than two times then setHidden:NO needs to be called more than once before the subview shows again.
