@@ -10,18 +10,27 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *greenView;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)showTapped:(id)sender {
+  [UIView animateWithDuration:0.25 animations:^{
+    self.greenView.hidden = NO;
+    if (self.greenView.isHidden) {
+      NSLog(@":(");
+    } else {
+      NSLog(@":)");
+    }
+  }];
 }
 
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+- (IBAction)hideTapped:(id)sender {
+  [UIView animateWithDuration:0.25 animations:^{
+    self.greenView.hidden = YES;
+  }];
 }
 
 @end
